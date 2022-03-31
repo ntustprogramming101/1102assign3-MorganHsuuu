@@ -266,7 +266,7 @@ void draw() {
 else {
   //Move according to counter
   if(downTimes > 0){
-    if(groundhog_Y<=80*25){////////////////////
+    if(groundhog_Y<80*25){////////////////////
     groundhog_Y += 16.0/3;
     //println("ground"+groundhog_Y);
   }
