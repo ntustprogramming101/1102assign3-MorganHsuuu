@@ -215,7 +215,7 @@ void draw() {
              }
         
         }
-        else if(j>=80*20 && j<80*24){   // 21-24
+        else if(j>=80*20 && j<80*25){   // 21-24
          image(soil5, i, 160+j);
           if(i/80%3 == 1){
            image(stone1, i-(j-80*16), 160+j);
