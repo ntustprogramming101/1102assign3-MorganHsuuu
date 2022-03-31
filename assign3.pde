@@ -215,7 +215,7 @@ void draw() {
              }
         
         }
-        else if(j>=80*20 && j<80*25){   // 21-24
+        else if(j>=80*20 && j<80*25){   // 21-24 
          image(soil5, i, 160+j);
           if(i/80%3 == 1){
            image(stone1, i-(j-80*16), 160+j);
@@ -267,7 +267,12 @@ else {
   //Move according to counter
   if(downTimes > 0){
     if(groundhog_Y<80*25){////////////////////
+    
     groundhog_Y += 16.0/3;
+    if(groundhog_Y>80*25){
+    groundhog_Y =  2000.0;
+    }
+    
     //println("ground"+groundhog_Y);
   }
      downTimes--;
@@ -322,7 +327,7 @@ else {
        
      //press left  
        
-
+  println(groundhog_Y);
   if(leftTimes > 0){
      groundhog_X -= 16.0/3 ;
      leftTimes--;
@@ -381,7 +386,7 @@ else {
     }
     
     break;
-    
+  
   }
 
     // DO NOT REMOVE OR EDIT THE FOLLOWING 3 LINES
