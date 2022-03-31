@@ -323,11 +323,9 @@ else {
       //println("right  "+groundhog_X,groundhog_Y);
      image(groundhogRight,round(groundhog_X),round(groundhog_Y));  
    }  
-       
-       
-     //press left  
-       
-  println(groundhog_Y);
+     
+     //press left 
+     
   if(leftTimes > 0){
      groundhog_X -= 16.0/3 ;
      leftTimes--;
