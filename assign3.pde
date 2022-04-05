@@ -96,12 +96,7 @@ void draw() {
     break;
 
     case GAME_RUN: // In-Game
-    if (move) {
-      pushMatrix();
-      translate(0, why);
-     
-      
-    }
+    
     // Background
     image(bg, 0, 0);
 
@@ -111,6 +106,13 @@ void draw() {
       fill(253,184,19);
       ellipse(590,50,120,120);
 
+    if (move) {
+      pushMatrix();
+      translate(0, why);
+     
+      
+    }
+   
     // Grass
     fill(124, 204, 25);
     noStroke();
