@@ -115,30 +115,33 @@ void draw() {
       ellipse(590,50,120,120);
       
     //soldier
-  image(soldier,soldierWalk,soldierPosition*80);
-   if(soldierWalk>630){
-     soldierWalk=-50;
-     }
-     else {
-     soldierWalk+=3;
-     }
-    //cabbage 
-      if(ca_Situation == true){ 
-     image(cabbage,-100,-100);
-     cabbage_X=-100;
-     cabbage_Y=-100;
+  //image(soldier,soldierWalk,soldierPosition*80);
+   //if(soldierWalk>630){
+   //  soldierWalk=-50;
+   //  }
+   //  else {
+   //  soldierWalk+=3;
+   //  }
+   // //cabbage 
+   //   if(ca_Situation == true){ 
+   //  image(cabbage,-100,-100);
+   //  cabbage_X=-100;
+   //  cabbage_Y=-100;
      
-     //println(lifes);
+   //  //println(lifes);
      
-   }else{
-    image(cabbage,cabbage_X*80,cabbage_Y*80);
+   //}else{
+   // image(cabbage,cabbage_X*80,cabbage_Y*80);
 
+   //}
+   if(why<=-80*20){
+     why = -80*20;
    }
     if (move) {
       pushMatrix();
       translate(0, why); 
-    }
-		
+    //}
+		}
 
 		// Grass
 		fill(124, 204, 25);
@@ -295,7 +298,7 @@ void draw() {
 else {
   //Move according to counter
   if(downTimes > 0){
-    if(groundhog_Y<=80*25){////////////////////
+    if(groundhog_Y<=80*25){
     groundhog_Y += 16.0/3;
     //println("ground"+groundhog_Y);
   }
@@ -308,8 +311,8 @@ else {
        
      }
      if(ca_downTimes > 0){
-     if(why >= -80*20){
-        why -= 16.0/3;       /////////////////////////////
+     if(why >= -80*23){
+       why -= round(16.0/3);       ///////////   //////  ////////////
     }  
      ca_downTimes--;
            if(ca_downTimes == 1 ){
@@ -371,10 +374,11 @@ else {
    }    
    
 }
-		
+		//if(why>=-80*19){
       if (move) {
         translate(0,why);
         popMatrix();
+      //}
      }
      // Health UI
     for(int i = 0; i<lifes; i++){
@@ -435,7 +439,7 @@ void keyPressed(){
       break;
 
       case DOWN:
-      if(why <= 80*25){
+      if(why >= -80*25){    ////////////////'//''/'//
        move = true;
       } else{
        move = false;
