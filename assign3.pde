@@ -270,7 +270,7 @@ void draw() {
  if(groundhog_X<0){
     groundhog_X=0;
    }
-   if(groundhog_Y>80*25){
+   if(groundhog_Y>=80*25){
     groundhog_Y=80*25;
    }
 
