@@ -435,7 +435,11 @@ void keyPressed(){
       break;
 
       case DOWN:
-      move = true;
+      if(why <= 80*25){
+       move = true;
+      } else{
+       move = false;
+      };
       downPressed = true;
       typeAgain = false ;
       ca_typeAgain = false ;
